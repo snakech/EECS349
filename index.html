@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Photon by HTML5 UP</title>
+		<title>EECS 349 Final Project</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -20,10 +20,11 @@
 			<section id="header">
 				<div class="inner">
 					<span class="icon major fa-cloud"></span>
-					<h1>Hi, I'm <strong>Photon</strong>, another fine<br />
-					little freebie from <a href="http://html5up.net">HTML5 UP</a>.</h1>
-					<p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br />
-					lobortis feugiat sapien sed etiam volutpat accumsan.</p>
+					<h1>Soccor Game<strong> Result</strong> Predictor<br />
+					For Spanish Primera Liga</a>.</h1>
+					<h3>EECS 349 - Machine Learning - Northwestern Univeristy</h3>
+					<p>Zihao Chen, zihaochen2018@u.norhtwestern.edu<br />
+					Siqi Zhuo, siqizhuo2018@u.northwestern.edu</p>
 					<ul class="actions">
 						<li><a href="#one" class="button scrolly">Discover</a></li>
 					</ul>
@@ -36,42 +37,29 @@
 					<div class="row 150%">
 						<div class="6u 12u$(medium)">
 							<header class="major">
-								<h2>Lorem ipsum dolor adipiscing<br />
-								amet dolor consequat</h2>
+								<b><h2>What is the task<br />
+								why is it important/interesting?</h2></b>
 							</header>
-							<p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
+							<b><p>Our task is to predict the result of an incoming soccer match(Win, Draw or Lost) in Spanish League(La Liga) for Home team based on attributes of both two teams, along with other factors such as weather, and live sports betting odds from Beat365. Predicting the outcomes of sport events represents a natural application for machine learning. The precise game outcome can also be critical to soccer fans and bettors as a source of advice. As a consequence, using machine learning technology to handle big data of soccer statistics is also a good way to test ourselves how well we have learnt in this course.</p></b>
 						</div>
 						<div class="6u$ 12u$(medium) important(medium)">
-							<span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+							<span class="image fit"><img src="images/lfp.jpg" alt="" /></span>
 						</div>
 					</div>
 				</div>
 			</section>
 
 		<!-- Two -->
-			<section id="two" class="main style2">
+			<section id="two" class="main style2 special">
 				<div class="container">
-					<div class="row 150%">
-						<div class="6u 12u$(medium)">
-							<ul class="major-icons">
-								<li><span class="icon style1 major fa-code"></span></li>
-								<li><span class="icon style2 major fa-bolt"></span></li>
-								<li><span class="icon style3 major fa-camera-retro"></span></li>
-								<li><span class="icon style4 major fa-cog"></span></li>
-								<li><span class="icon style5 major fa-desktop"></span></li>
-								<li><span class="icon style6 major fa-calendar"></span></li>
-							</ul>
-						</div>
-						<div class="6u$ 12u$(medium)">
-							<header class="major">
-								<h2>Lorem ipsum dolor adipiscing<br />
-								amet dolor consequat</h2>
-							</header>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-							<p>Blandit faucibus proin. Ac aliquam integer adipiscing enim non praesent vis commodo nunc phasellus cubilia ac risus accumsan. Accumsan blandit. Lobortis phasellus non lobortis dit varius mi varius accumsan lobortis. Blandit ante aliquam lacinia lorem lobortis semper morbi col faucibus vitae integer placerat accumsan orci eu mi odio tempus adipiscing adipiscing adipiscing curae consequat feugiat etiam dolore.</p>
-							<p>Adipiscing a commodo ante nunc accumsan interdum mi ante adipiscing. A nunc lobortis non nisl amet vis volutpat aclacus nascetur ac non. Lorem curae eu ante amet sapien in tempus ac. Adipiscing id accumsan adipiscing ipsum.</p>
-						</div>
-					</div>
+					<header class="major">
+						<b><h2>Features we used</h2></b>
+					</header>
+					<h4>We are working on an open source European Soccer Database with 25k+ matches, players & teams attributes for European Professional Football, and FIFA data API with players and teams attributes together, reprocess with SQL script to generate a well structed data frame for our ML model. We decide to use last 10 years match statistics of La Liga with:<br /> 
+					<br/>
+					<b>Weather, Home Team, Away Team, HomeRank, AwayRank, WinRateHome, WinRateAway, LastFiveGameWinRateHome, LastFiveGameWinRateAway, Beat365H(Home Win), Beat365D(Draw), Beat365A(Away Win)</b> <br />
+					<br/>
+					as attributes for each game.</h4>
 				</div>
 			</section>
 
@@ -79,29 +67,29 @@
 			<section id="three" class="main style1 special">
 				<div class="container">
 					<header class="major">
-						<h2>Adipiscing amet consequat</h2>
+						<b><h2>Approches and learners we tried</h2></b>
 					</header>
-					<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
-					<div class="row 150%">
-						<div class="4u 12u$(medium)">
-							<span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
+					<h4>We tried ZeroR = 48.85% at first as the baseline. Then tried following learners:</h4>
+					<div class="row 200%">
+						<div class="4u 16u$(medium)">
+							<span class="image fit"><img src="images/dt.png" alt="" /></span>
+							<h3>Decision Tree</h3>
 							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
 							<ul class="actions">
 								<li><a href="#" class="button">More</a></li>
 							</ul>
 						</div>
-						<div class="4u 12u$(medium)">
-							<span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
+						<div class="4u 16u$(medium)">
+							<span class="image fit"><img src="images/knn.png" alt="" /></span>
+							<h3>K-NN</h3>
 							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
 							<ul class="actions">
 								<li><a href="#" class="button">More</a></li>
 							</ul>
 						</div>
-						<div class="4u$ 12u$(medium)">
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
+						<div class="4u$ 16u$(medium)">
+							<span class="image fit"><img src="images/pt.png" alt="" /></span>
+							<h3>Multi-layer perceptron</h3>
 							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
 							<ul class="actions">
 								<li><a href="#" class="button">More</a></li>
@@ -115,7 +103,7 @@
 			<section id="four" class="main style2 special">
 				<div class="container">
 					<header class="major">
-						<h2>Ipsum feugiat consequat?</h2>
+						<h2>BP Neural Networking Model Implemented by R</h2>
 					</header>
 					<p>Sed lacus nascetur ac ante amet sapien.</p>
 					<ul class="actions uniform">
